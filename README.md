@@ -12,9 +12,9 @@
 ### インストール
 
 ```bash
-git clone https://github.com/<your-user>/qai-checker-mini.git
+git clone https://github.com/Kensuke-sam/qai-checker-mini.git
 cd qai-checker-mini
-python -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 make install
 ```
 
@@ -22,13 +22,13 @@ make install
 
 ```bash
 # Markdown 出力（デフォルト）
-python -m qai_checker_mini examples/doc_a.md examples/doc_b.md
+python3 -m qai_checker_mini examples/doc_a.md examples/doc_b.md
 
 # JSON 出力
-python -m qai_checker_mini examples/doc_a.md examples/doc_b.md --format json
+python3 -m qai_checker_mini examples/doc_a.md examples/doc_b.md --format json
 
 # 用語揺れの閾値・件数を調整
-python -m qai_checker_mini examples/doc_a.md examples/doc_b.md --min-sim 0.80 --topk 50
+python3 -m qai_checker_mini examples/doc_a.md examples/doc_b.md --min-sim 0.80 --topk 50
 ```
 
 `make run` でもサンプル文書を使って実行できます。
