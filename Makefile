@@ -1,10 +1,17 @@
+VENV := .venv
+PYTHON := $(VENV)/bin/python3
+PIP := $(VENV)/bin/pip
+
 .PHONY: install run test
 
-install:
-	python3 -m pip install -e '.[dev]'
+$(VENV):
+	python3 -m venv $(VENV)
 
-run:
-	python3 -m qai_checker_mini examples/doc_a.md examples/doc_b.md
+install: $(VENV)
+	$(PIP) install -e '.[dev]'
 
-test:
-	pytest -v
+run: install
+	$(PYTHON) -m qai_checker_mini examples/doc_a.md examples/doc_b.md
+
+test: install
+	$(VENV)/bin/pytest -v

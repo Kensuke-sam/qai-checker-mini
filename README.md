@@ -14,8 +14,7 @@
 ```bash
 git clone https://github.com/Kensuke-sam/qai-checker-mini.git
 cd qai-checker-mini
-python3 -m venv .venv && source .venv/bin/activate
-make install
+make install   # venv作成 & 依存インストールを自動で行います
 ```
 
 ### 実行
